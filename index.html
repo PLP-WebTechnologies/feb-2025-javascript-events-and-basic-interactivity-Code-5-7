@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Experience</h1>
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="home">Home</button>
+            <button class="tab-btn" data-tab="gallery">Gallery</button>
+            <button class="tab-btn" data-tab="contact">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="interactive-box">
+                <h2>Click Me!</h2>
+                <p id="changeable-text">I'll change when you click the button</p>
+                <button id="text-changer">Change Text</button>
+            </div>
+
+            <div class="interactive-box hover-box">
+                <h2>Hover Over Me!</h2>
+                <p>Watch what happens when you hover</p>
+            </div>
+
+            <div class="interactive-box">
+                <h2>Type Something!</h2>
+                <p>Last key pressed: <span id="key-display">None yet</span></p>
+                <input type="text" id="key-input" placeholder="Type here...">
+            </div>
+
+            <div class="interactive-box secret-box">
+                <h2>Find the Secret!</h2>
+                <p>Double click or long press me</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="tab-content">
+            <div class="slideshow">
+                <img src="https://source.unsplash.com/random/800x400?nature" alt="Nature" class="slide active">
+                <img src="https://source.unsplash.com/random/800x400?city" alt="City" class="slide">
+                <img src="https://source.unsplash.com/random/800x400?animal" alt="Animal" class="slide">
+                <div class="controls">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password* (min 8 characters)</label>
+                    <input type="password" id="password" required>
+                    <div class="error-message" id="password-error"></div>
+                    <div class="password-strength">
+                        <span class="strength-bar"></span>
+                        <span class="strength-text">Weak</span>
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
